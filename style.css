@@ -1,0 +1,147 @@
+html{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(
+        to bottom,
+        hsl(273, 75%, 66%),
+        hsl(240, 73%, 65%)
+    );
+}
+
+.container{
+    width: 925px;
+    height: 500px;
+    border-radius: 1em;
+    box-shadow: 0px 10px 50px 0px rgb(37, 37, 37);
+    background-color: #FFFFFF;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .logo-bg{
+    width: 80%;
+    height: auto;
+    position: absolute;
+    top: -25%;
+    left: -38%;
+}
+
+.container .logo-woman{
+    position: absolute;
+    top: 70px;
+    left: -85px;
+}
+
+.container h1{
+    margin: 70px 0 25px 475px;
+    font-weight: 700;
+}
+
+.container .faq{
+    margin: 0 95px 0 475px;
+    padding: 15px 0;
+    border-bottom: solid 2px #e9e9e9; 
+    font-weight: 400;
+    color: hsl(240, 6%, 50%);
+}
+
+.container .faq .question-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .faq .question-icon .question{
+    font-size: 14px;
+}
+
+.container .faq .question-icon .question:hover{
+    color: hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+
+.container .faq .question-icon .question.active{
+    color: black;
+    font-weight: bold;
+}
+
+.container .faq .question-icon img:hover{
+    cursor: pointer;
+}
+
+.container .faq .answer{
+    display: none;
+    margin-top: 15px;
+}
+
+.container .faq .answer.active{
+    display: block;
+}
+
+.container .faq .question-icon img{
+    transition: 0.5s ease;
+    transform: rotate(0deg);
+}
+
+.container .faq .question-icon img.active{
+    transition: 0.5s ease;
+    transform: rotate(-180deg);
+}
+
+@media screen and (max-width: 1000px) {
+    .container{
+        width: 335px;
+        height: auto;
+        padding: 30px 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .container .logo-bg{
+        width: 80%;
+        height: auto;
+        position: absolute;
+        top: -30%;
+        left: 10%;
+    }
+    
+    .container .logo-woman{
+        width: 80%;
+        height: auto;
+        position: absolute;
+        top: -26%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .container h1{
+        margin: 130px 0 0 20px;
+    }
+    
+    .container .faq{
+        width: 80%;
+        margin: 0;
+        padding: 15px 0;
+    }
+}
